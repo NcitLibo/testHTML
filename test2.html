@@ -6,16 +6,7 @@
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #005290;
 	}
-    .embeddedServiceHelpButton .uiButton .helpButtonLabel .message {
-      overflow: visible !important;
-    }
-    .message {
-       border-style:none !important;
-       color:white !important;
-    background-color: #005290;
-        }
 </style>
-
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
@@ -42,16 +33,16 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://ntt64.my.salesforce.com',
-			'https://healthdatabank.secure.force.com/liveAgentSetupFlow',
+			'https://ntt64--devteam1.my.salesforce.com',
+			'https://devteam1-healthdatabank.cs58.force.com/liveAgentSetupFlow',
 			gslbBaseURL,
-			'00D5h000004OgIk',
+			'00D0l0000003BVl',
 			'Einstein',
 			{
-				baseLiveAgentContentURL: 'https://c.la2-c1-ukb.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la1-c1cs-ukb.salesforceliveagent.com/content',
 				deploymentId: '5725h000000d5oh',
 				buttonId: '5735h000000d5RS',
-				baseLiveAgentURL: 'https://d.la2-c1-ukb.salesforceliveagent.com/chat',
+				baseLiveAgentURL: 'https://d.la1-c1cs-ukb.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'Einstein',
 				isOfflineSupportEnabled: false
 			}
@@ -60,7 +51,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://ntt64.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://ntt64--devteam1.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
